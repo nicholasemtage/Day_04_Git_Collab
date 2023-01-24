@@ -11,7 +11,7 @@ As instructed in the in-class activity notebook for today, you are
 only expected to complete one PART below. Do not worry if your group 
 is not big enough to finish all parts below, but if you have extra 
 time, you're welcome to do so.
-"""
+
 
 import numpy as np
 import pandas as pd
@@ -46,7 +46,12 @@ plt.title('Lake Michigan/Huron Water Level Over Time')
 # Using the Erie Dataset, plot the Water Level, the second column, 
 # as a function of time years
 
-
+erie_data = pd.read_csv('erie.csv')
+erie_data
+plt.plot(erie_data['time'], erie_data['water level'])
+plt.xlabel('Time')
+plt.ylabel('Water Level')
+plt.title('Time vs Water Level')
 
 # PART 4
 # Using the Ontario Dataset, plot the Water Level, the second column, 
@@ -59,7 +64,15 @@ plt.title('Lake Michigan/Huron Water Level Over Time')
 # Michigan/Hurion Water Level vs Superior Water Level to see if there 
 # is any correlation between the water levels.
 
+# +
+mhu = pd.read_csv("mhu.csv")
+sup = pd.read_csv('sup.csv')
 
+
+plt.scatter(mhu["lake average"],sup["lake levels"])
+
+
+# -
 
 # PART 6
 # Using the Michigan/Hurion and Erie Datasets, plot the 
