@@ -11,6 +11,7 @@ only expected to complete one PART below. Do not worry if your group
 is not big enough to finish all parts below, but if you have extra 
 time, you're welcome to do so.
 """"
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -32,7 +33,12 @@ import matplotlib.pyplot as plt
 # Using the Erie Dataset, plot the Water Level, the second column, 
 # as a function of time years
 
-
+erie_data = pd.read_csv('erie.csv')
+erie_data
+plt.plot(erie_data['time'], erie_data['water level'])
+plt.xlabel('Time')
+plt.ylabel('Water Level')
+plt.title('Time vs Water Level')
 
 # PART 4
 # Using the Ontario Dataset, plot the Water Level, the second column, 
@@ -55,7 +61,7 @@ import matplotlib.pyplot as plt
 
 
 # PART 7
-#Using the Superior and Ontario Datasets, plot the Superior Water 
+# Using the Superior and Ontario Datasets, plot the Superior Water 
 # Level vs Ontario Water Level to see if there is any correlation 
 # between the water levels.
 
