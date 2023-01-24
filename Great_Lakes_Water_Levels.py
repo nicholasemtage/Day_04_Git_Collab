@@ -55,11 +55,10 @@ plt.title('Time vs Water Level')
 mhu = pd.read_csv("mhu.csv")
 sup = pd.read_csv('sup.csv')
 
-<<<<<<< HEAD
+
 plt.scatter(mhu["lake average"],sup["lake levels"])
-=======
-plt.plot(mhu["lake average"],sup["lake levels"])
->>>>>>> emtage
+
+
 # -
 
 # PART 6
