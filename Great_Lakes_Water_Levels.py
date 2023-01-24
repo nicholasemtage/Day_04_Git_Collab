@@ -1,20 +1,21 @@
-""""
-To use this notebook for your in-class assignment, you will need these 
-files, which you shoujld have downloaded:
-* mhu.csv -- Lake Michigan and Lake Huron
-* sup.csv -- Lake Superior
-* eri.csv -- Lake Erie
-* ont.csv -- Lake Ontario
+# """"
+# To use this notebook for your in-class assignment, you will need these 
+# files, which you shoujld have downloaded:
+# * mhu.csv -- Lake Michigan and Lake Huron
+# * sup.csv -- Lake Superior
+# * eri.csv -- Lake Erie
+# * ont.csv -- Lake Ontario
+#
+# As instructed in the in-class activity notebook for today, you are 
+# only expected to complete one PART below. Do not worry if your group 
+# is not big enough to finish all parts below, but if you have extra 
+# time, you're welcome to do so.
+# """"
 
-As instructed in the in-class activity notebook for today, you are 
-only expected to complete one PART below. Do not worry if your group 
-is not big enough to finish all parts below, but if you have extra 
-time, you're welcome to do so.
-""""
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
 
 # PART 1
 # Using the Michigan/Huron Dataset, plot the Water Level, the second 
@@ -38,7 +39,13 @@ import matplotlib.pyplot as plt
 # Using the Ontario Dataset, plot the Water Level, the second column, 
 # as a function of time years
 
-
+ont=pd.read_csv("ont.csv")
+plt.plot(ont["year"],ont["Lake Ontario annual averages"],label="Ontario",color="green")
+plt.xlabel("Years")
+plt.ylabel("Annual Averages Lake Ontario")
+plt.title("Ontario Water levels over time")
+plt.grid()
+plt.legend()
 
 # PART 5
 # Using the Michigan/Huron and Superior Datasets, plot the 
@@ -55,7 +62,7 @@ import matplotlib.pyplot as plt
 
 
 # PART 7
-#Using the Superior and Ontario Datasets, plot the Superior Water 
+# Using the Superior and Ontario Datasets, plot the Superior Water 
 # Level vs Ontario Water Level to see if there is any correlation 
 # between the water levels.
 
