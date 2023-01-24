@@ -1,3 +1,4 @@
+# +
 """"
 To use this notebook for your in-class assignment, you will need these 
 files, which you shoujld have downloaded:
@@ -10,17 +11,30 @@ As instructed in the in-class activity notebook for today, you are
 only expected to complete one PART below. Do not worry if your group 
 is not big enough to finish all parts below, but if you have extra 
 time, you're welcome to do so.
-""""
+"""
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+# -
 
 
 # PART 1
 # Using the Michigan/Huron Dataset, plot the Water Level, the second 
 # column, as a function of time years
 
+# +
+# Carrie
 
+mhu = pd.read_csv("mhu.csv")
+
+
+plt.plot(mhu["time"], mhu["lake average"], color = 'skyblue')
+plt.ylabel('Lake Levels')
+plt.xlabel('Years')
+plt.title('Lake Michigan/Huron Water Level Over Time')
+
+# -
 
 # PART 2
 # Using the Superior Dataset, plot the Water Level, the second column, 
@@ -55,7 +69,7 @@ import matplotlib.pyplot as plt
 
 
 # PART 7
-#Using the Superior and Ontario Datasets, plot the Superior Water 
+# Using the Superior and Ontario Datasets, plot the Superior Water 
 # Level vs Ontario Water Level to see if there is any correlation 
 # between the water levels.
 
